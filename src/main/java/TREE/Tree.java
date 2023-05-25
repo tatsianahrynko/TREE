@@ -5,14 +5,14 @@ import java.awt.*;
 public class Tree {
     private double heightFt;
     private double trunkDiameterInches;
-    private TreeType treeType;  //CREATED ATTRIBUTES FOR A CLASS. NON-STATIC ATTRIBUTES
+    private TreeType treeType;  //non-static attributes
     protected static Color TRUNK_COLOR = new Color(102,51,0);//static attribute/ class attribute
 
     public Tree(double heightFt, double trunkDiameterInches, TreeType treeType) {
         this.heightFt = heightFt;
         this.trunkDiameterInches = trunkDiameterInches;
         this.treeType = treeType;
-    } // constructor will create a tree
+    }
 
     public double getHeightFt() {
         return heightFt;
@@ -42,20 +42,23 @@ public class Tree {
         this.treeType = treeType;
     }
 
-    public static void setTrunkColor(Color trunkColor) {
-        TRUNK_COLOR = trunkColor;
-    }
+   public static void setTrunkColor(Color trunkColor) {
+       TRUNK_COLOR = trunkColor;
+   }
 
-    public void grow(){ //behavior выразили функцией
-        this.heightFt = this.heightFt + 10;  //implementation
-        this.trunkDiameterInches = this.trunkDiameterInches + 1; //increment them accordingly
+    public void grow(){
+        //implementation
+        this.heightFt = this.heightFt + 10;
+        //increment them accordingly
+        this.trunkDiameterInches = this.trunkDiameterInches + 1;
     }
 
     static void announceTree() {
         System.out.println("Look out for that " + TRUNK_COLOR + " tree!");
     }
 
-    public void announceTallTree() { //able to define attributes and behaviors that are reusable. able to bind state and behavior into 1 unit. proram becomes
+    //able to define attributes and behaviors that are reusable. able to bind state and behavior into 1 unit.
+    public void announceTallTree() {
         if (this.heightFt > 100) {
             System.out.println("That's tall " + this.treeType + " tree!");
         }

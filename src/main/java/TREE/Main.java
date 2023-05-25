@@ -4,12 +4,12 @@ import java.awt.*;
 
 public class Main {
     public static void main(String[] args) {
-        Tree myFavoriteOakTree = new Tree(125, 5, TreeType.OAK); //new - helps to create NEW tree from our tree class
-        // we create a variable myFavoriteOakTree to save it
-        //System.out.println(myFavoriteOakTree.treeType);
+        Tree myFavoriteOakTree = new Tree(125, 5, TreeType.OAK);
+
+        System.out.println(myFavoriteOakTree.getTreeType());
         myFavoriteOakTree.announceTallTree(); // added new behavior
 
-        Tree myFavoriteMapleTree = new Tree(90, 30, TreeType.MAPLE); 
+        Tree myFavoriteMapleTree = new Tree(90, 30, TreeType.MAPLE);
 
         System.out.println(myFavoriteMapleTree.getTreeType());
         System.out.println(myFavoriteMapleTree.getHeightFt());
@@ -23,17 +23,17 @@ public class Main {
 
         Color brighterBlue = myDefaultBlue.brighter();
 
-        //brighterBlue.brighter();
+        brighterBlue.brighter();
 
         System.out.println(Tree.TRUNK_COLOR); //className.method
         Tree.announceTree();// static method
 
-        /*if (myFavoriteOakTree.heightFt > 100) {
-            System.out.println("That's tall " + myFavoriteOakTree.treeType + " tree!");
+        if (myFavoriteOakTree.getHeightFt() > 100) {
+            System.out.println("That's tall " + myFavoriteOakTree.getTreeType() + " tree!");
         }
 
-        if (myFavoriteMapleTree.heightFt > 100) {
-            System.out.println("That's tall " + myFavoriteMapleTree.treeType + " tree!");
-        }*/
+        if (myFavoriteMapleTree.getHeightFt() < 100) {
+            System.out.println("That's tall " + myFavoriteMapleTree.getTreeType() + " tree!");
+        }
     }
 }
